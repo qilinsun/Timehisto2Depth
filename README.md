@@ -1,4 +1,8 @@
 # Timehisto2Depth
+## 下载必要的资源文件
+链接：https://pan.baidu.com/s/1GZof-keTT-QXbv1w8vLv4g 
+提取码：snva   
+下载完成后放在工程, 根目录
 ## 环境
 我这边使用的python3.9目测3.7+应该没有问题  
 环境使用anaconda3配置，有空了可以打包个docker镜像  
@@ -40,11 +44,17 @@ E5 2678V3 12核心24线程，2.5G 很旧
 铠侠RD20 一个性能很不错的固态，开24个线程的话大概有1500MB/S读写
 
 ## 各版本详情
-## 单核心纯CPU
-### main_v1_8400
+### 单核心纯CPU
+#### main_v1_8400
 基本上1:1用python翻译了matlab，用于检查正确性，非常慢，顾名思义大概要跑8400秒
-### main_v2_numba_cpu_220
+#### main_v2_numba_cpu_220
 所有计算函数使用numba加速，运行时编译成机器码，大概需要220秒。
 使用argmax寻找峰值的函数试图重建了一下，看起好像没啥问题，需要进一步检查
-## 多核心纯CPU
-## 多核心CPU和GPU混合
+#### main_v3_numba_cpu_165
+预处理APP这个参数的N次方，降低到165秒
+### 多核心纯CPU
+### 多核心CPU和GPU混合
+
+## 没啥用的小工具
+## cal_md5.py
+快速计算上百G文件的MD5
