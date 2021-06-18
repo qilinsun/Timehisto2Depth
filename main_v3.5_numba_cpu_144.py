@@ -94,7 +94,7 @@ def rand_choice_nb(population, k, w, out):
     cum_normalized_w[-1] = 1.0
     rands = np.random.random(k)
     for i in range(k):
-        out[i] = population[np.searchsorted(cum_normalized_w, rands[i], side="right")]
+        out[i] = population[np.searchsorted(cum_normalized_w, rands[i], side="left")]
 
 
 counts_1_w_sum = np.sum(counts_1.flatten())
@@ -107,7 +107,7 @@ rounded_t_1_div_by_dt = np.round(t_1.flatten() / dt).astype(np.int64)
 def rand_choice_jitter_vec_nb(k, out):
     rands = np.random.random(k)
     for i in range(k):
-        out[i] = rounded_t_1_div_by_dt[np.searchsorted(counts_1_cum_normalized_w, rands[i], side="right")]
+        out[i] = rounded_t_1_div_by_dt[np.searchsorted(counts_1_cum_normalized_w, rands[i], side="left")]
 
 
 @numba.njit((numba.float64, numba.int64, numba.int64), cache=True)
