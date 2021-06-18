@@ -45,15 +45,28 @@ E5 2678V3 12核心24线程，2.5G 很旧
 
 ## 各版本详情
 ### 单核心纯CPU
-#### main_v1_8400
+#### 1. main_v1_8400.py
 基本上1:1用python翻译了matlab，用于检查正确性，非常慢，顾名思义大概要跑8400秒
-#### main_v2_numba_cpu_220
+#### 2. main_v2_numba_cpu_220.py
 所有计算函数使用numba加速，运行时编译成机器码，大概需要220秒。
 使用argmax寻找峰值的函数试图重建了一下，看起好像没啥问题，需要进一步检查
-#### main_v3_numba_cpu_165
+#### 3. main_v3_numba_cpu_165.py
 预处理APP这个参数的N次方，降低到165秒
+#### 4. main_v3.5_numba_cpu_144.py
+```
+k_vec = randsample(1:size(hdr,2),M,true,hdr(j,:,1));    % Importance sampling
+jitter_vec = round(randsample(t_1,M,true,counts_1)/dt); idx = 1;
+```
+观察一下两个重要性采样，发现`1:size(hdr,2)`、`round(t_1/dt)`、`round(counts_1/dt)`都是定值，可以预先计算。所有矩阵能预先分配空间的就预先分配空间，避免动态内存分配。运算时间降低到144秒。
+
 ### 多核心纯CPU
+#### 1. main_v4_numba_multi_cpus_89.py
+随机采样10000个样本可以并行。并行这个函数，运算时间降低到89秒。注意MAX_THREAD最大应该设置为物理核心数。
 ### 多核心CPU和GPU混合
+#### 1. GPU处理权重和随机数，CPU使用预处理的权重和随机数来计算
+GPU预处理所有按权重采样需要的权重，并生成35亿个double随机数，然后从显存传回内存，共需要7秒。
+CPU开8个进程，共需要58秒。因为GPU和CPU可以同时计算，所以实际上只需要58秒。
+
 
 ## 没啥用的小工具
 ## cal_md5.py
