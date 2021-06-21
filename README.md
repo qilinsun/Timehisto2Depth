@@ -1,3 +1,8 @@
+# TODOs
+- [ ] Read 512*512 SPAD paper, extract useful parameters for simulation.
+- [ ] Be familar with the mode of SPAD camera, write a reading notes of your understandings.
+- [ ] Write a plan about this project
+
 # Timehisto2Depth
 ## 器件原理阅读笔记
 
