@@ -1,12 +1,29 @@
 # TODOs
-- [ ] Read 512*512 SPAD paper, extract useful parameters for simulation.
+- [x] Read 512*512 SPAD paper.
+- [ ] Extract useful parameters for simulation.
 - [ ] Be familar with the mode of SPAD camera, write a reading notes of your understandings.
 - [ ] Write a plan about this project
 
-# Timehisto2Depth
-## 器件原理阅读笔记
+# PLAN
+这个有点难度
 
-https://www.yuque.com/docs/share/3f027146-171d-4f7a-9715-379ccb70e64d?# 《器件原理阅读》
+1. 搞清楚原理
+   - 问孙老师一些论文里提到的不懂的概念（6.21-6.23）
+   - 提取模拟的关键参数（6.21-6.23）
+   - 简单写一下SPAD相机工作模式（6.21-6.23）
+2. 生成模拟数据
+3. 训练深度重建模型
+# SPAD相机的工作模式
+1. 全局快门
+todo
+2. 滚动快门
+todo
+# 器件原理阅读笔记
+
+https://www.yuque.com/docs/share/3f027146-171d-4f7a-9715-379ccb70e64d?# 精读了一下，做了个简单的翻译和整理
+
+# Timehisto2Depth
+
 
 ## 下载必要的资源文件
 
