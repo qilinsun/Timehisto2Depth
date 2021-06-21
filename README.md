@@ -1,5 +1,10 @@
 # Timehisto2Depth
+## 器件原理阅读笔记
+
+https://www.yuque.com/docs/share/3f027146-171d-4f7a-9715-379ccb70e64d?# 《器件原理阅读》
+
 ## 下载必要的资源文件
+
 链接：https://pan.baidu.com/s/1GZof-keTT-QXbv1w8vLv4g 
 提取码：snva   
 下载完成后放在工程, 根目录
