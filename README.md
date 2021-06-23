@@ -1,8 +1,8 @@
 # TODOs
 - [x] Read 512*512 SPAD paper.
-- [ ] Extract useful parameters for simulation.
-- [ ] Be familar with the mode of SPAD camera, write a reading notes of your understandings.
-- [ ] Write a plan about this project
+- [x] Extract useful parameters for simulation.
+- [x] Be familar with the mode of SPAD camera, write a reading notes of your understandings.
+- [x] Write a plan about this project
 
 # PLAN
 这个有点难度
@@ -15,9 +15,56 @@
 3. 训练深度重建模型
 # SPAD相机的工作模式
 1. 全局快门
-todo
+打开像素，关闭像素，开始读出，结束读出，串行。
+每个1比特帧的总曝光量为950 ns，这是通过在10.2 µs的1比特读出之前，以400 ns的周期打开一个95 ns宽的门10次来实现的。
+4400fps 4bit
+274 8bit
 2. 滚动快门
-todo
+（打开像素，关闭像素）（开始读出，结束读出），并行，开了像素就开始逐行读。
+10×95 ns宽的门。
+全局曝光，1bit，97700fps
+
+
+# 关键参数
+## 极限参数
+### 门控机制
+- 打开skew = 250ps
+- 关闭skew = 344ps
+- 最小持续时间 = 5.75ps
+
+### 最高帧率
+97700fps 1bit
+24fps 12bit
+
+### 门偏移(gate shifts)
+<40ps，这个还是不太懂，大概是每行内不同像素的门控信号并不是同时到达的
+
+### 光子检出率(PDP)
+过量偏压(V<sub>ex</sub>)越高，光子检出率越高。对波长520nm的光PDP最高。
+
+### 暗计数率
+我对暗计数率的理解是没有光子但是检出光子的概率，过量偏压(V<sub>ex</sub>)越低，暗计数率越低
+
+### 整帧读出时间
+全局曝光+滚动快门，感觉是全局打开然后逐行读出？大概是10.2µs
+
+### 每个读出周期的最大光子数
+1bit，多于1个光子不会被记录
+
+### 不敏感？
+首先，由于其全局快门模式操作，传感器在读出期间对光子不敏感。其次，在PC内部的8位数据从RAM传输到存储设备（SSD）期间，传感器的数据采集必须暂停。这里不太懂
+
+### 热像素
+25℃无传感器冷却的情况下大概1%，不过也不总是1%，有一个分布，见图9
+
+### 信噪比？
+这里不太明白
+
+### 门窗口特性？
+门窗口的特性及其在整个阵列中的均匀性是时间分辨成像的关键指标，最终限制了荧光体寿命的准确性和精确度。图12和图13展示了SwissSPAD2在两种不同设置下的门特性。在图12中，展示了472×256像素阵列上的5.75 ns门特性。这个实验是用一个790纳米的脉冲激光器进行的，脉冲重复频率（PRF）为20MHz。激光脉冲与20MHz的触发信号同步，该信号由摄像系统的FPGA生成。时间扫描是通过移动门和充电信号与FPGA的激光触发器的相位来实现的。可实现的最短门窗口为5.75ns，上升沿偏差为250ps，下降沿偏差为344ps。在图13中，介绍了472×256阵列上具有最低偏移的门的特性。
+
+
+
 # 器件原理阅读笔记
 
 https://www.yuque.com/docs/share/3f027146-171d-4f7a-9715-379ccb70e64d?# 精读了一下，做了个简单的翻译和整理
