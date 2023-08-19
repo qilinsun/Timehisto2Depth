@@ -107,13 +107,17 @@ admm
 
 下周todos
 
+解释SPAD1怎么给偏压2怎么计数3看spad的datasheet
+解释当前spad面临的问题是什么，仿真解决的问题是什么
+解释为什么用admm优化
+
 写个deblur的简单任务
 卷积核+噪声
 admm
 最好是cuda的
 2周收作业
+下周该收作业了
 
-spad应用上admm，不用炼丹
 
 淘宝上的单点/4*4spad
 能读histo的相机（确认客服）
