@@ -193,5 +193,45 @@ admm
 
 
 
+----------------------------
+
+展示实验图片：
+
+![GT(第1行第57列)](./GT_histo/img_SPAD_1_57.png)
+
+上图为第1行第57列的理想情况
+
+
+
+![SPADhistogram响应(第1行第57列)](./Spad_histo/img_SPAD_1_57.png)
+
+上图为第1行第57列的SPAD仿真响应情况
+
+![GT(第1行第58列)](./GT_histo/img_SPAD_1_58.png)
+
+上图为第1行第58列的理想情况
+
+![SPADhistogram响应(第1行第58列)](./Spad_histo/img_SPAD_1_58.png)
+
+上图为第1行第58列的SPAD仿真响应情况
+
+
+
+![RGB_GT_结果](./RGB_GT.jpg)
+
+RGB_GT_结果
+
+
+
+Depth_GT_结果
+
+![SPAD寻峰结果](./spad_depth_max_002.jpg)
+
+SPAD寻峰结果
+
+
+
+SPAD重心法结果
+
 
 
