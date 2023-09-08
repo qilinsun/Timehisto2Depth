@@ -197,23 +197,21 @@ admm
 
 展示实验图片：
 
-![GT(第1行第57列)](./GT_histo/img_SPAD_1_57.png)
+![GT(第1行第57列)](./Spad_histo_300/img_SPAD_0000.png)
 
-上图为第1行第57列的理想情况
+上图为第1行的SPAD仿真响应情况
 
+![GT(第1行第57列)](./Spad_histo_300/img_SPAD_0001.png)
 
+上图为第2行的SPAD仿真响应情况
 
-![SPADhistogram响应(第1行第57列)](./Spad_histo/img_SPAD_1_57.png)
+![GT(第1行第57列)](./Spad_histo_300/img_SPAD_0002.png)
 
-上图为第1行第57列的SPAD仿真响应情况
+上图为第3行的SPAD仿真响应情况
 
-![GT(第1行第58列)](./GT_histo/img_SPAD_1_58.png)
+![GT(第1行第57列)](./Spad_histo_300/img_SPAD_0003.png)
 
-上图为第1行第58列的理想情况
-
-![SPADhistogram响应(第1行第58列)](./Spad_histo/img_SPAD_1_58.png)
-
-上图为第1行第58列的SPAD仿真响应情况
+上图为第4行的SPAD仿真响应情况
 
 
 
@@ -229,9 +227,15 @@ Depth_GT_结果
 
 SPAD寻峰结果
 
+![SPAD寻峰结果](./untitled.jpg)
+
+SPAD bin=100 寻峰结果
 
 
-SPAD重心法结果
 
+![SPAD寻峰结果](./histo/img_histo_0000_0000.png)
 
+![SPAD寻峰结果](./histo/img_histo_0000_0001.png)
+
+![SPAD寻峰结果](./histo/img_histo_0000_0002.png)
 
