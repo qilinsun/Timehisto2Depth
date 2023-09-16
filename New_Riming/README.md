@@ -239,3 +239,14 @@ SPAD bin=100 寻峰结果
 
 ![SPAD寻峰结果](./histo/img_histo_0000_0002.png)
 
+---------------------------------
+
+SPAD bin=100 寻峰结果
+
+![SPAD寻峰结果](./bin=100/bathroom2_albedo_1_view_1.h5.png)
+
+![SPAD寻峰结果](./bin=100/bathroom2_albedo_1_view_2.h5.png)
+
+![SPAD寻峰结果](./bin=100/bathroom2_albedo_1_view_3.h5.png)
+
+![SPAD寻峰结果](./bin=100/bathroom2_albedo_1_view_4.h5.png)
